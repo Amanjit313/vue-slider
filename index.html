@@ -20,9 +20,7 @@
                     <img :src="photos[counterPhoto].image" title="photo" />
                     <div class="text">
                         <h3>{{photos[counterPhoto].title}}</h3>
-                        <p>
-                            {{photos[counterPhoto].text}}
-                        </p>
+                        <p>{{photos[counterPhoto].text}}</p>
                     </div>
                 </div>
 
@@ -48,8 +46,8 @@
 
                 <div class="thumbs">
 
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div @click= "prevPhotos()" class="prev"></div>
+                    <div @click= "nextPhotos()" class="next"></div>
                     
                     <div v-for = "photo in photos" class="thumb">
                         <img :src="photo.image" :alt="photo.title">

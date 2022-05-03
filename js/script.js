@@ -37,8 +37,32 @@ const app = new Vue({
                         text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.'
                     }
                 ],
-                counterPhoto: 1
+                counterPhoto: 2
 
-           }
+    },
 
-})
+    methods: {
+
+        prevPhotos(){
+            this.counterPhoto--;
+
+            if (this.counterPhoto < 0){
+                this.counterPhoto = 4;
+            };
+
+            console.log(this.counterPhoto);
+        },
+
+        nextPhotos(){
+            this.counterPhoto++;
+
+            if(this.counterPhoto > 4){
+                this.counterPhoto = 0;
+            };
+
+            console.log(this.counterPhoto);
+        }
+
+    }
+
+});
