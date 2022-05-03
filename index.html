@@ -29,7 +29,7 @@
                     <div @click= "prevPhotos()" class="prev"></div>
                     <div @click= "nextPhotos()" class="next"></div>
                     
-                    <div @click="clickPhotos(index)" v-for = "(photo, index) in photos" class="thumb">
+                    <div @click="clickPhotos(index)" v-for = "(photo, index) in photos" class="thumb" :class=" counterPhoto === index ? 'active' : '' ">
                         <img :src="photo.image" :alt="photo.title">
                     </div>
                     
