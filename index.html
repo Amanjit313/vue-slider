@@ -27,7 +27,7 @@
                     </div>
                 </div>
 
-                <div class="thumbs">
+<!--                 <div class="thumbs">
                     <div class="prev"></div>
                     <div class="next"></div>
                     <div class="thumb active">
@@ -45,6 +45,17 @@
                     <div class="thumb">
                         <img src="img/05.jpg" alt="Paradise" />
                     </div>
+                </div> -->
+
+                <div class="thumbs">
+
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                    
+                    <div v-for = "photo in photos" class="thumb">
+                        <img :src="photo.image" :alt="photo.title">
+                    </div>
+                    
                 </div>
 
             </div>
