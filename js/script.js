@@ -37,7 +37,7 @@ const app = new Vue({
                         text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.'
                     }
                 ],
-                counterPhoto: 2
+                counterPhoto: 0
 
     },
 
@@ -61,6 +61,10 @@ const app = new Vue({
             };
 
             console.log(this.counterPhoto);
+        },
+
+        clickPhotos(index){
+            this.counterPhoto = index;
         }
 
     }
